@@ -8,5 +8,7 @@ draw.path = function (ctx, path, color="black") {
     for(let i=1; i<path.length; i++) {
         ctx.lineTo(...path[i]);
     }
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
     ctx.stroke();
 }

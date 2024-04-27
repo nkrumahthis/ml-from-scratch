@@ -14,13 +14,14 @@ class SketchPad {
 
         this.undoBtn = document.createElement("button");
         this.undoBtn.innerHTML = "UNDO";
-        this.undoBtn.disabled = true;
         container.appendChild(this.undoBtn);
 
         this.ctx = this.canvas.getContext("2d");
 
         this.paths = [];
         this.isDrawing = false;
+
+        this.#redraw();
 
         this.#addEventListeners();
     }
